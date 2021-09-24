@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  
+  <category>
+    <pattern>Hello MACHINE</pattern>
+    <template>Hello World.</template>
+  </category>
+   <category>
+    <pattern>Hello *</pattern>
+    <template>Hello User!</template>
+  </category>
+  <category>
+    <pattern>_ MACHINE</pattern>
+    <template>HYEE I AM HERE!</template>
+  </category>
+  <category>
+    <pattern>My name is * * </pattern>
+    <template>Hi! <star index="1"/> <star index="2"/>.  How are you <star index="1"/>?</template>
+  </category>
+  
+   <category>
+    <pattern>My name is * * </pattern>
+    <template>Hi! <set name="firstname"><star index="1"/></set><set name="lastname"><star index="2"/></set> <set name="fullname"><star index="1"/><star index="2"/></set></template>
+  </category>
+  
+   <category>
+    <pattern>What is my Firstname? </pattern>
+    <template>your name is <get name="firstname"/>.</template>
+  </category>
+   <category>
+    <pattern>What is my lastname  </pattern>
+    <template>your name is <get name="lastname" />.</template>
+  </category>
+  <category>
+    <pattern>What is my fullname  </pattern>
+    <template>your name is <get name="firstname" /><get name="lastname" /> <get name="fullname" />.</template>
+  </category>
+ <category>
+    <pattern>My tommy name  is *  </pattern>
+    <template>Hi! <set name="firstname"><star/></set></template>
+  </category>
+  <category>
+    <pattern>what is my tommy name </pattern>
+    <template>your tom name is <get  name="firstname" /></template>
+  </category>
+<category>
+    <pattern>My cat name  is * *  </pattern>
+    <template>Hi! <set name="firstname"><star/></set>  <set name="Middlename"><star index="2"/></set></template>
+  </category>
+  <category>
+    <pattern>what is my cat name </pattern>
+    <template>your cat name is <get  name="firstname" /> <get  name="Middlename" /> </template>
+  </category>
+  <category>
+      <pattern>HLW</pattern>
+      <template>
+          <random>
+              <li>
+                  HLW guys
+              </li>
+              <li>
+                  Hello
+              </li>
+              <li>
+                  good to see u
+              </li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>Roll a dice</pattern>
+      <template>
+          <random>
+              <li>1</li>
+               <li>2</li>
+                <li>3</li>
+                 <li>4</li>
+                  <li>5</li>
+                   <li>6</li>
+                    <li>7</li>
+          </random>
+      </template>
+  </category>
+  <category>
+      <pattern>I ate * </pattern>
+      <template>
+          that's so yummy.
+          <think><set name="food"><star/></set></think>
+      </template>
+  </category>
+  <category>
+      <pattern>What food do i like</pattern>
+      <template>Well! earlier you ate <get name="food" />,so i assume you like that.</template>
+  </category>
+  <category>
+      <pattern>ASK me a question</pattern>
+      <template>OK.DO you like sea?</template>
+  </category>
+  <category>
+     <that>OK.DO you like sea</that>
+      <pattern>YES</pattern>
+      <template>ME too.it is nice to relax on sand.</template>
+  </category>
+  <category>
+       <that>OK.DO you like sea</that>
+      <pattern>NO</pattern>
+      <template>As that's shame .i love sea.</template>
+  </category>
+  <category>
+      <pattern>ASK me another question</pattern>
+      <template>DO you like to drive a car?</template>
+  </category>
+   <category>
+       <that>DO you like to drive a car</that>
+      <pattern>YES</pattern>
+      <template>wo amazing</template>
+  </category>
+   <category>
+    <that>DO you like to drive a car</that>
+      <pattern>NO</pattern>
+      <template>its really strange.</template>
+  </category>
+</aiml>
